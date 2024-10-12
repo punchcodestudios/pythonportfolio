@@ -16,7 +16,7 @@ from datetime import date
 from forms import ContactForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY') #'8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY') #''
 ckEditor = CKEditor(app)
 Bootstrap5(app)
 
