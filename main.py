@@ -1,8 +1,6 @@
 import os
 
 from flask import Flask, render_template, flash, redirect, url_for
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -19,13 +17,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY') #''
 ckEditor = CKEditor(app)
 Bootstrap5(app)
-
-# limiter = Limiter(
-#     get_remote_address,
-#     app=app,
-#     default_limits=["5 per minute"],
-#     storage_uri="memory://"
-# )
 
 # CREATE DATABASE
 class Base(DeclarativeBase):
@@ -56,7 +47,6 @@ def about():
     return render_template("pages/about.html", **context)
 
 @app.route("/contact", methods=['GET', 'POST'])
-# @limiter.limit("5 per minute")
 def contact():
     contact_form = ContactForm()
     context = {
