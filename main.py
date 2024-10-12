@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, flash, redirect, url_for
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -14,7 +16,7 @@ from datetime import date
 from forms import ContactForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY') #'8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 ckEditor = CKEditor(app)
 Bootstrap5(app)
 
