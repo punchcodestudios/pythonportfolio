@@ -1,0 +1,51 @@
+{% extends '/layouts/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% include '/components/page-banner.html' %}
+<div class="page-content-wrapper">
+    <div class="page-title-container p-3 text-white">
+        <h1>project gallery</h1>
+    </div>
+
+    <div class="row gx-4 gx-lg-5 mt-5">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Morse Code</h2>
+                    <p class="card-text"><strong>Project Type: </strong>Python Scripting</p>
+                    <p class="card-text">
+                        <strong>Description: </strong>A console app that takes an alpha input and converts it to a visual representation of dots and dashes ("dits" and "dahs").
+                        This demonstrates basic string formatting and manipulation through substitution using native python methods.
+                        </p>
+                    <div class="card-text">
+                        <p><strong>References:</strong></p>
+                        <ul>
+                            <li><strong>GitHub repository: </strong><a href="#" target="_blank">to be provided</a></li>
+                            <li><strong>Widkipedia article on Morse Code: </strong><a href="https://en.wikipedia.org/wiki/Morse_code" target="_blank">https://en.wikipedia.org/wiki/Morse_code</a></li>
+                        </ul>
+                    </div>
+                </div>
+<!--                <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('projects') }}">More Info</a></div>-->
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">New Project</h2>
+                    <p class="card-text">
+                        Check back often as new projects will be uploaded and referenced as they become available.
+                    </p>
+                </div>
+<!--                <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('about') }}">More Info</a></div>-->
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 mt-5 mb-3 references">
+            <p><strong>References:</strong></p>
+            <ul>
+                <li>Udemy.com: <a href="https://www.udemy.com" target="_blank">https://www.udemy.com</a></li>
+                <li>100 Days of Code: The complete Python Pro Bootcamp: <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank">https://www.udemy.com/course/100-days-of-code/</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends '/layouts/base.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+{% include '/components/page-banner.html' %}
+<div class="page-content-wrapper">
+    <div class="page-title-container p-3 text-white">
+        <h1>about this site</h1>
+    </div>
+
+    <div class="row gx-4 gx-lg-5 mt-5">
+        <div class="col-md-6 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Mission Statement</h2>
+                    <p class="card-text">
+                        This site will demonstrate proficient and competent knowledge of the python programming language by providing practical examples in many different areas.
+                        Wherever possible, examples will be showcased directly in the browser, however some applications, such as desktop apps, data science projects and other command-line applications will link to a github location for closer examination.
+
+                    </p>
+                </div>
+<!--                <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('projects') }}">More Info</a></div>-->
+            </div>
+        </div>
+        <div class="col-md-6 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Inspiration and Guidance</h2>
+                    <p class="card-text">
+                        The projects demonstrated in this site were inspired, if not taken directly from, a course titled <em><strong>"100 Days of Code: The Complete Python Pro Bootcamp"</strong></em> led by instructor <em><strong>Dr. Angela Yu</strong></em>.
+                        This course comes highly recommended by punchcodestudios and can be found here on the <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank">Udemy.com site</a>.
+                        Thank you, Angela for your inspiration and for sharing your enormous wealth of knowledge on this fascinating subject!
+                    </p>
+                </div>
+<!--                <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('about') }}">More Info</a></div>-->
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 mt-5 mb-3 references">
+            <p><strong>References:</strong></p>
+            <ul>
+                <li>Udemy.com: <a href="https://www.udemy.com" target="_blank">https://www.udemy.com</a></li>
+                <li>100 Days of Code: The complete Python Pro Bootcamp: <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank">https://www.udemy.com/course/100-days-of-code/</a></li>
+                <li>Flask Boilerplate: <a href="https://github.com/realpython/flask-boilerplate/" target="">https://github.com/realpython/flask-boilerplate/</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

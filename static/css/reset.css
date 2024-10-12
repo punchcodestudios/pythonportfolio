@@ -1,0 +1,80 @@
+
+/**
+ * @file
+ * boilerplate reset stylesheet file.
+ * https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/
+ */
+
+
+/*****************************************************************************
+ * Main elements
+ ****************************************************************************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    border: none;
+}
+
+html {
+    overflow-y: scroll;
+    font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+    -webkit-text-size-adjust: none; /* for iOS Safari */
+    text-size-adjust: none; /* for other mobile browsers */
+}
+
+a {
+  cursor: pointer;
+}
+::selection {
+  background: #555;
+  color: #FFF;
+}
+::-moz-selection {
+  background: #555;
+  color: #FFF;
+}
+::-webkit-selection {
+  background: #555;
+  color: #FFF;
+}
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+    cursor: pointer;
+}
+/* Main elements end */
+
+
+/*****************************************************************************
+ * Various other styles
+ ****************************************************************************/
+img {
+    display: block;
+    max-width: 100%;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    /*
+        Tip: Add the role="list" attribute-value to all lists that you’d like screen readers to announce as such,
+        because list-style: none; disables this ability in some web browsers.
+    */
+    list-style: none;
+    padding-left: 0;
+}
+
+article ol,
+article ul {
+    list-style-position: inside;
+}
+
+
+
+/* Various other styles end */

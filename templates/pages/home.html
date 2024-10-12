@@ -1,0 +1,51 @@
+{% extends '/layouts/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!-- Heading Row-->
+<div class="row gx-4 gx-lg-5 align-items-center my-5">
+    <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/assets/home_hero.png" alt="..." /></div>
+    <div class="col-lg-5">
+        <h1 class="font-weight-light">python development</h1>
+        <p>Explore this site to learn the many ways punchcodestudios leverages the power and flexibility of the python programming language to develop robust solutions that will meet your business needs</p>
+<!--        <a class="btn btn-primary" href="#!">Call to Action!</a>-->
+    </div>
+</div>
+<!-- Call to Action-->
+<div class="card text-white bg-primary my-5 py-4 text-center">
+    <div class="card-body"><p class="text-white m-0"></p>
+    <p class="text-white m-0"><a class="text-white no-underline" target="_blank" href="https://avilpage.com/2014/12/14-great-quotes-about-python.html">&quot;Everyone knows that any scripting language shootout that doesnt show python as the best language is faulty by design&quot; ~ Max M</a></p></div>
+</div>
+
+<!-- Content Row-->
+<div class="row gx-4 gx-lg-5">
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">Projects</h2>
+                <p class="card-text">Join us as we take a deep dive into the many projects punchcode studios has developed using the power of python</p>
+            </div>
+            <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('projects') }}">More Info</a></div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">About this site</h2>
+                <p class="card-text">Examine the technical details of this site to learn how the python programming language can benefit your business</p>
+            </div>
+            <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('about') }}">More Info</a></div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">Contact</h2>
+                <p class="card-text">
+                    Send us a message - punchcodestudios is excited to hear from you!
+                </p>
+            </div>
+            <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('contact') }}">More Info</a></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
