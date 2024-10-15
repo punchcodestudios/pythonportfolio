@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcefcd23-f037-4448-9b57-85fc5302068f" name="Changes" comment="updating with database key">
-      <change afterPath="$PROJECT_DIR$/templates/pages/add_cafe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/cafes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/components/main-nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/main-nav.html" afterDir="false" />
-    </list>
+    <list default="true" id="fcefcd23-f037-4448-9b57-85fc5302068f" name="Changes" comment="adding cafe project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728589159966</updated>
       <workItem from="1728589164811" duration="61934000" />
-      <workItem from="1729000317926" duration="8432000" />
+      <workItem from="1729000317926" duration="9217000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <option name="closed" value="true" />
@@ -176,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728744641813</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="adding cafe project">
+      <option name="closed" value="true" />
+      <created>1729018825693</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729018825693</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +211,8 @@
     <MESSAGE value="adding os dependency" />
     <MESSAGE value="removing email validator for now until successful deploy" />
     <MESSAGE value="updating with database key" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating with database key" />
+    <MESSAGE value="adding cafe project" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding cafe project" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonPortfolio$forms.coverage" NAME="forms Coverage Results" MODIFIED="1729000873451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
