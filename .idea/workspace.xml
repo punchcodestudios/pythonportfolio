@@ -103,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728589159966</updated>
       <workItem from="1728589164811" duration="61934000" />
-      <workItem from="1729000317926" duration="9217000" />
+      <workItem from="1729000317926" duration="9663000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <option name="closed" value="true" />
@@ -177,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729018825693</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="adding cafe project">
+      <option name="closed" value="true" />
+      <created>1729019851393</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729019851393</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

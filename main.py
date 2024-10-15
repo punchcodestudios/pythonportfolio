@@ -82,7 +82,7 @@ def cafes():
         'cafes': list_of_rows,
         'titles': titles
     }
-    with open('instance/cafe-data.csv', newline='', encoding='utf-8') as csv_file:
+    with open('static/data/cafe-data.csv', newline='', encoding='utf-8') as csv_file:
         csv_data = csv.reader(csv_file, delimiter=',')
         for row in csv_data:
             list_of_rows.append(row)
@@ -100,7 +100,7 @@ def add_cafe():
         return redirect(url_for('cafes'))
 
     if form.validate_on_submit():
-        with open("instance/cafe-data.csv", mode="a", encoding='utf-8') as csv_file:
+        with open("static/data/cafe-data.csv", mode="a", encoding='utf-8') as csv_file:
             csv_file.write(f"\n{form.cafe_name.data},"
                            f"{form.location.data},"
                            f"{form.open_time.data},"
