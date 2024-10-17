@@ -1,0 +1,39 @@
+{% from 'bootstrap5/table.html' import render_table %}
+{% extends '/layouts/base.html' %}
+{% block title %}ToDo's{% endblock %}
+
+{% block content %}
+{% include '/components/page-banner.html' %}
+
+<div class="page-content-wrapper">
+    <div class="page-title-container p-3 text-white">
+        <h1>to-do list</h1>
+    </div>
+    <div class="row gx-4 gx-lg-5 mt-5">
+      <div class="col-12 mb-3">
+          <a class="btn btn-secondary btn-sm" href="{{ url_for('add_todo') }}">Add New To-Do item</a>
+      </div>
+        {% for row in todos %}
+            <div class="col-12 mb-5">
+                <div class="card h-100">
+                    <div class="card-body row">
+                        <div class="col-md-2">
+                            <p class="card-text">{{ row.due_date }}</p>
+                            {% set datestr = row.due_date - row.date_created %}
+                            <p class="card-text">{{ datestr | replace(", 0:00:00", "") }} remain</p>
+                        </div>
+                        <div class="col-md-10">
+                            <h2 class="card-title">{{ row.title }}</h2>
+                            <p class="card-text">{{ row.content }}</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-secondary btn-sm" href="{{ url_for('complete_todo', todo_id=row.id) }}">Mark Complete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+</div>
+
+{% endblock %}
