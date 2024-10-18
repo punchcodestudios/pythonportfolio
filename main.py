@@ -1,6 +1,8 @@
 import os
 import csv
 import extcolors
+from bs4 import BeautifulSoup
+import lxml
 import tempfile
 import numpy as np
 import matplotlib.pyplot as plt
@@ -235,6 +237,19 @@ def color_palette_results():
         'statistics': colors_df
     }
     return render_template("pages/color_palette_results.html", **context)
+
+@app.route('/projects/top_songs')
+def top_songs():
+    response = requests.get("https://ew.com/music/best-rock-songs/")
+    website = response.text
+    soup = BeautifulSoup(website, "lxml")
+
+    titles = [item.getText() for item in soup.find_all("h2")]
+    context = {
+        'header_img': 'projects.png',
+        'titles': titles
+    }
+    return render_template("pages/top_songs.html", **context)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5003)

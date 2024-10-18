@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcefcd23-f037-4448-9b57-85fc5302068f" name="Changes" comment="updating requirements.txt to include new imports">
+    <list default="true" id="fcefcd23-f037-4448-9b57-85fc5302068f" name="Changes" comment="adding uploads folder">
+      <change afterPath="$PROJECT_DIR$/templates/pages/top_songs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +114,7 @@
       <updated>1728589159966</updated>
       <workItem from="1728589164811" duration="61934000" />
       <workItem from="1729000317926" duration="37598000" />
-      <workItem from="1729204285820" duration="28735000" />
+      <workItem from="1729204285820" duration="34122000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <option name="closed" value="true" />
@@ -226,7 +228,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729272783957</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="adding uploads folder">
+      <option name="closed" value="true" />
+      <created>1729279745963</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1729279745963</updated>
+    </task>
+    <task id="LOCAL-00016" summary="adding uploads folder">
+      <option name="closed" value="true" />
+      <created>1729279762461</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1729279762461</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,14 +282,15 @@
     <MESSAGE value="adding cafe data file" />
     <MESSAGE value="adding todo list assignment" />
     <MESSAGE value="updating requirements.txt to include new imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating requirements.txt to include new imports" />
+    <MESSAGE value="adding uploads folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding uploads folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>163</line>
+          <line>165</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -279,6 +298,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonPortfolio$forms.coverage" NAME="forms Coverage Results" MODIFIED="1729096502161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonPortfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1729279517141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonPortfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1729284958291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

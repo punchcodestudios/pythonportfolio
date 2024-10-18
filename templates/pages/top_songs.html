@@ -1,0 +1,38 @@
+{% extends '/layouts/base.html' %}
+{% block title %}Top 25 Songs{% endblock %}
+{% block content %}
+{% include '/components/page-banner.html' %}
+<div class="page-content-wrapper">
+    <div class="page-title-container p-3 text-white">
+        <h1>top songs</h1>
+    </div>
+
+    <div class="row gx-4 gx-lg-5 mt-5">
+        <div class="col-md-8 mb-5 ms-auto me-auto">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Top 25 songs of all time</h2>
+                    <p class="card-text">
+                        Here are the best songs of all time according to this site: <a href="https://ew.com/music/best-rock-songs/" target="_blank">https://ew.com/music/best-rock-songs/</a>.
+                    </p>
+                    <ul>
+                    {% for title in titles[:-2] %}
+                    <li><strong>{{loop.index}}</strong>{{title}}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+<!--                <div class="card-footer"><a class="btn btn-secondary btn-sm" href="{{ url_for('about') }}">More Info</a></div>-->
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 mt-5 mb-3 references">
+            <p><strong>References:</strong></p>
+            <ul>
+                <li>Udemy.com: <a href="https://www.udemy.com" target="_blank">https://www.udemy.com</a></li>
+                <li>100 Days of Code: The complete Python Pro Bootcamp: <a href="https://www.udemy.com/course/100-days-of-code/" target="_blank">https://www.udemy.com/course/100-days-of-code/</a></li>
+                <li>Flask Boilerplate: <a href="https://github.com/realpython/flask-boilerplate/" target="">https://github.com/realpython/flask-boilerplate/</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
