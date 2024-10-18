@@ -1,6 +1,12 @@
 import os
 import csv
-
+import extcolors
+import numpy as np
+import matplotlib.pyplot as plt
+import requests
+from scipy import misc # contains an image of a racoon!
+from PIL import Image, ImageColor  # for reading image files
+import pandas as pd
 
 from flask import Flask, render_template, flash, redirect, url_for, request
 from flask_bootstrap import Bootstrap5
@@ -13,12 +19,17 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, URL
 from flask_ckeditor import CKEditor, CKEditorField
 from datetime import date, datetime
-from forms import ContactForm, CoffeeShopForm, TodoForm
+from forms import ContactForm, CoffeeShopForm, TodoForm, UploadFileForm
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
+from werkzeug.utils import secure_filename
+from colormap import rgb2hex
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY', '8BYkEfBA6O6donzWlSihBXox7C0sKR6b') #''
+app.config['UPLOAD_FOLDER'] = 'static/uploads/'
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
 ckEditor = CKEditor(app)
 Bootstrap5(app)
 
@@ -48,6 +59,11 @@ class TodoItem(db.Model):
 
 with app.app_context():
     db.create_all()
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/')
 def home():
@@ -162,6 +178,62 @@ def add_todo():
         return redirect(url_for('todos'))
     return render_template("pages/add_todo.html", **context)
 
+@app.route("/projects/color_palette", methods=["GET", "POST"])
+def color_palette():
+    form = UploadFileForm()
+    context = {
+        'header_img': 'projects.png',
+        'form': form,
+    }
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'image' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['image']
+        # If the user does not select a file, the browser submits an
+        # empty file without a filename.
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            context = {
+                'header_img': 'projects.png',
+                'image': filename,
+            }
+            return redirect(url_for('color_palette_results', **context))
+
+    return render_template("pages/color_palette.html", **context)
+
+
+def analyse_image(array):
+    colors_pre_list = str(array).replace('([(', '').split(', (')[0:-1]
+    df_rgb = [i.split('), ')[0] + ')' for i in colors_pre_list]
+    df_percent = [i.split('), ')[1].replace(')', '') for i in colors_pre_list]
+    df_color_up = [rgb2hex(int(i.split(", ")[0].replace('(', '')),
+                           int(i.split(", ")[1]),
+                           int(i.split(', ',)[2].replace(")", ""))) for i in df_rgb]
+    df = pd.DataFrame(zip(df_color_up, df_percent), columns=['c_code', 'occurrence'])
+    return df
+
+@app.route('/projects/color_palette_results', methods=["GET", "POST"])
+def color_palette_results():
+    print(request.args.get('image'))
+    image_name = request.args.get('image')
+    image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_name)
+    i = Image.open(image_path)
+    colors = extcolors.extract_from_image(i, extcolors.DEFAULT_TOLERANCE, 10)
+    colors_df = analyse_image(colors)
+
+    # print(analyse_image(colors))
+    context = {
+        'header_img': 'projects.png',
+        'image': image_name,
+        'statistics': colors_df
+    }
+    return render_template("pages/color_palette_results.html", **context)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5003)

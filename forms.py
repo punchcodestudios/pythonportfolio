@@ -5,7 +5,7 @@ from flask_wtf import FlaskForm
 from sqlalchemy import DateTime, Nullable
 from wtforms import StringField, SubmitField, DateField, BooleanField
 from wtforms.fields.choices import SelectField
-from wtforms.fields.simple import TextAreaField
+from wtforms.fields.simple import TextAreaField, FileField
 from wtforms.validators import DataRequired, URL, Email, Length, Optional
 from wtforms.validators import DataRequired, ValidationError
 from flask_ckeditor import CKEditorField
@@ -41,3 +41,7 @@ class TodoForm(FlaskForm):
     due_date = DateField('Due Date', format='%Y-%m-%d', default=datetime.today, validators=[DataRequired()])
     submit = SubmitField('Submit')
     cancel = SubmitField('Cancel')
+
+class UploadFileForm(FlaskForm):
+    image = FileField('Source', validators=[DataRequired()])
+    submit = SubmitField('Submit')

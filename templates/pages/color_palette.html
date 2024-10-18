@@ -1,0 +1,23 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% extends '/layouts/base.html' %}
+{% block title %}Color palette{% endblock %}
+{% block content %}
+{% include '/components/page-banner.html' %}
+<div class="page-content-wrapper">
+    <div class="page-title-container p-3 text-white">
+        <h1>color palette</h1>
+    </div>
+    <div class="form-wrapper mt-5 mb-5">
+        <div class="col-8 mb-5">
+            <div class="card h-100">
+                <div class="card-body">
+                    <p class="form-header">
+                      Upload an image file for analysis
+                    </p>
+                    {{ render_form(form, novalidate=True, button_map={"Submit": "primary"}) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

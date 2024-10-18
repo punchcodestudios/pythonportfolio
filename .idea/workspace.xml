@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcefcd23-f037-4448-9b57-85fc5302068f" name="Changes" comment="adding cafe data file">
-      <change afterPath="$PROJECT_DIR$/static/css/todo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/add_todo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/todo.html" afterDir="false" />
+    <list default="true" id="fcefcd23-f037-4448-9b57-85fc5302068f" name="Changes" comment="adding todo list assignment">
+      <change afterPath="$PROJECT_DIR$/templates/pages/color_palette.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/color_palette_results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
       <list>
         <option value="Python Script" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -71,6 +70,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.add_cafe.html.executor": "Run",
     "JavaScript Debug.base.html.executor": "Run",
+    "JavaScript Debug.color_palette.html.executor": "Run",
     "JavaScript Debug.contact.html.executor": "Run",
     "JavaScript Debug.hero-base.html.executor": "Run",
     "JavaScript Debug.home.html.executor": "Run",
@@ -113,7 +113,8 @@
       <option name="presentableId" value="Default" />
       <updated>1728589159966</updated>
       <workItem from="1728589164811" duration="61934000" />
-      <workItem from="1729000317926" duration="35781000" />
+      <workItem from="1729000317926" duration="37598000" />
+      <workItem from="1729204285820" duration="24545000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <option name="closed" value="true" />
@@ -203,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729020385237</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="adding todo list assignment">
+      <option name="closed" value="true" />
+      <created>1729173081255</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729173081255</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,10 +248,22 @@
     <MESSAGE value="updating with database key" />
     <MESSAGE value="adding cafe project" />
     <MESSAGE value="adding cafe data file" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding cafe data file" />
+    <MESSAGE value="adding todo list assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding todo list assignment" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>162</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonPortfolio$forms.coverage" NAME="forms Coverage Results" MODIFIED="1729096502161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonPortfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1729172221931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonPortfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1729269001916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

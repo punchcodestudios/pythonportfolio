@@ -1,0 +1,44 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% extends '/layouts/base.html' %}
+{% block title %}Color palette{% endblock %}
+{% block content %}
+{% include '/components/page-banner.html' %}
+<div class="page-content-wrapper">
+    <div class="page-title-container p-3 text-white">
+        <h1>color palette results</h1>
+    </div>
+    <div class="form-wrapper mt-5 mb-5">
+        <div class="col-8 mb-5">
+            <div class="h-100">
+                <div class="row">
+                    <div class="card col-6">
+                        <img src="/static/uploads/{{image}}" alt="sample image" style="object-fit: cover; max-width:300px">
+                    </div>
+                    <div class="card col-6 card h-100">
+                        <div class="card-body">
+                            <p class="form-header">Statistics</p>
+                            {% if statistics is defined and statistics|length %}
+                            <table style="border-spacing:15px;">
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>hex</td>
+                                    <td>num</td>
+                                </tr>
+                            {% for index, row in statistics.iterrows() %}
+                            <tr>
+                                <td style="background-color:{{ row[0] }}; width:50px; padding:10px;">&nbsp;</td>
+                                <td style="padding:10px;">{{row[0]}}</td>
+                                <td style="padding:10px;">{{row[1]}}</td>
+                            </tr>
+                            {% endfor %}
+                            </table>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+<div class="mt-5"><a class="btn btn-secondary btn-sm" href="{{ url_for('color_palette') }}">Upload New Image</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
